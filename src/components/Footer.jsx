@@ -1,6 +1,3 @@
-"use client"
-
-import { Rocket } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -32,14 +29,14 @@ export default function Footer() {
                 className="w-10 h-10 bg-white-50 rounded-lg flex items-center justify-center hover:bg-blue-100 transition-colors shadow-md"
                 aria-label="Twitter"
               >
-                <img src="/x.png" alt="Twitter" className="w-5 h-5" />
+                <img src="/x.png" alt="Twitter" className="w-5 h-5 hover:-translate-y-0.5 transition-all duration-300 ease-in-out" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-white-50 rounded-lg flex items-center justify-center hover:bg-blue-100 transition-colors shadow-md"
+                className="w-10 h-10 bg-white-50 rounded-lg flex items-center justify-center hover:bg-gray-200 transition-colors shadow-md "
                 aria-label="LinkedIn"
               >
-                <img src="/li.png" alt="LinkedIn" className="w-5 h-5" />
+                <img src="/li.png" alt="LinkedIn" className="w-5 h-5 hover:-translate-y-0.5 transition-all duration-300 ease-in-out" />
               </a>
             </div>
           </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { navLinks } from '../constants/navLinks'
+import { Link } from 'react-router-dom'
 function Navbar() {
   return (
 
@@ -16,7 +17,7 @@ function Navbar() {
             {navLinks.map(({label})=>{
                 return(
                     <li key={label}>
-                        <a href={label} className='hidden md:block text-[#1F1F1F] font-semibold opacity-80 font-regular text-sm cursor-pointer hover:opacity-100 transition-all duration-300 ease-in-out hover:-translate-y-0.5 transition-all duration-300 ease-in-out '>{label}</a>
+                        <Link to={` / ${label}`} className='hidden md:block text-[#1F1F1F] font-semibold opacity-80 font-regular text-sm cursor-pointer hover:opacity-100 transition-all duration-300 ease-in-out hover:-translate-y-0.5 transition-all duration-300 ease-in-out '>{label}</Link>
                     </li>
                 )
             })}
