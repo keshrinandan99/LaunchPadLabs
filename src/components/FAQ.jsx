@@ -44,13 +44,13 @@ export const FAQSection = () => {
         {/* Header */}
         <div className="mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[hsl(var(--badge-background))] mb-6">
-            <div className="w-2 h-2 rounded-full bg-[hsl(var(--badge-dot))]" />
-            <span className="text-sm font-medium text-[hsl(var(--badge-foreground))]">FAQ</span>
+            <div className="w-2 h-2 rounded-md " />
+            <img src="faqrounded.png" alt="faqImg" className="p-.5 rounded-xl bg-blue-100 "/>
           </div>
-          <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
+          <h1 className="text-[#202020] text-4xl sm:text-5xl font-semibold  mb-4 font-jakarta">
             Got Questions? We've Got Answers
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl">
+          <p className="text-lg text-muted-foreground max-w-2xl text-[#616161] font-medium font-jakarta">
             Simple explanations for your most important questions
           </p>
         </div>
@@ -66,10 +66,10 @@ export const FAQSection = () => {
                   value={faq.id}
                   className="bg-card rounded-xl border border-border shadow-[var(--shadow-sm)] px-6 py-2 data-[state=open]:shadow-[var(--shadow-md)] transition-shadow"
                 >
-                  <AccordionTrigger className="text-left text-base sm:text-lg font-medium text-foreground hover:no-underline py-6">
+                  <AccordionTrigger className="text-left text-base sm:text-lg font-medium text-foreground hover:no-underline py-6 text-[#404040] font-medium font-jakarta">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground pb-6 pt-2">
+                  <AccordionContent className="text-muted-foreground pb-6 pt-2 text-[#616161] font-medium font-jakarta">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -79,7 +79,7 @@ export const FAQSection = () => {
 
           {/* CTA Card */}
           <div className="lg:col-span-1">
-            <Card className="p-8 bg-card border border-border shadow-[var(--shadow-md)] rounded-xl sticky top-8">
+            <Card className="p-5 bg-card border border-border shadow-[var(--shadow-md)] rounded-xl relative top-8   ">
               <div className="flex flex-col items-center text-center space-y-6">
                 <img
                   src="/profileImg.png"
@@ -87,16 +87,19 @@ export const FAQSection = () => {
                   className="w-20 h-20 rounded-full object-cover shadow-[var(--shadow-md)]"
                 />
                 <div>
-                  <p className="text-muted-foreground mb-2">Still not sure?</p>
-                  <h3 className="text-2xl font-bold text-foreground">Book a free call.</h3>
+                  <p className="text-[#8C8C8C] mb-1 font-jakarta text-semibold">Still not sure?</p>
+                  <h3 className="text-2xl font-semibold text-jakarta text-black">Book a free call.</h3>
                 </div>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-black font-jakarta ">
                   Learn more about how we work and how we can help you and your startup.
                 </p>
-                <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-medium shadow-[var(--shadow-sm)] hover:shadow-[var(--shadow-md)] transition-all">
-                  <Phone className="w-4 h-4 mr-2" />
-                  Book A Call
-                </Button>
+              
+ <img 
+  src="/bookcall.png" 
+  alt="bookACallImg" 
+  className="w-32 h-10   cursor-pointer object-cover"
+/>
+             
               </div>
             </Card>
           </div>
