@@ -1,5 +1,5 @@
-
 import {Card} from './Card' 
+
 const tags=[
   "UI/UX",
   "Web Developement",
@@ -10,33 +10,37 @@ const description="FitAI brings personalized, AI-powered home workouts to your f
 
 const img="/project.png"
 const imgalt='projectImg'
+
 function Project() {
   return (
-    <div>
-
-    <img src='ourWork1.png' alt='ourWorkImg'/>
-       <Card
-        tags={tags}
+    <div className='w-full'>
+      <img src='ourWork1.png' alt='ourWorkImg' className='w-full h-auto'/>
+      
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8'>
+        <Card
+          tags={tags}
           title={title}
           description={description}
           imageUrl={img}
           imageAlt={imgalt}
         />
-       <Card
-        tags={tags}
+        <Card
+          tags={tags}
           title={title}
           description={description}
           imageUrl={img}
           imageAlt={imgalt}
         />
-       <Card
-        tags={tags}
+        <Card
+          tags={tags}
           title={title}
           description={description}
           imageUrl={img}
           imageAlt={imgalt}
         />
-        <img src='ourWork3.png' alt='ourWorkfooterImg' className='mt-20 ml-10'/>
+      </div>
+      
+      <img src='ourWork3.png' alt='ourWorkfooterImg' className='w-full h-auto mt-8 sm:mt-12 lg:mt-20'/>
     </div>
   )
 }
