@@ -36,7 +36,7 @@ function Project() {
           imageUrl={img}
           imageAlt={imgalt}
         />
-        <img src='ourWork3.png' alt='ourWorkfooterImg'/>
+        <img src='ourWork3.png' alt='ourWorkfooterImg' className='mt-20 ml-10'/>
     </div>
   )
 }
