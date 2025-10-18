@@ -6,10 +6,8 @@ export default function Footer() {
   return (
     <footer className="relative bg-gray-50 border-t border-gray-200 overflow-hidden">
       {/* Background text */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <h2 className="text-[12rem] md:text-[16rem] lg:text-[20rem] font-bold text-blue-100 whitespace-nowrap select-none">
-          LaunchPad Labs
-        </h2>
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none mt-60">
+        <img src="footerText.png" alt="footerImage"/>
       </div>
 
       {/* Content */}
@@ -18,61 +16,60 @@ export default function Footer() {
           {/* Branding section */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
-                <Rocket className="w-6 h-6 text-white" />
+              <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center shadow-md">
+                <img src="logo.png" alt="logoImg"/>
               </div>
-              <div className="text-2xl font-bold">
-                <span className="text-blue-500">LaunchPad</span>{" "}
-                <span className="text-gray-900">Labs</span>
+              <div >
+                <img src="/LaunchPad.png" alt="LaunchPadImg"/>
               </div>
             </div>
-            <p className="text-gray-600 text-sm leading-relaxed mb-6 max-w-xs">
+            <p className="text-[#525252] font-jakarta font-medium text-sm leading-relaxed mb-6 max-w-xs w-[284px] h-[64px]">
               We build high-quality MVPs to transform your ideas into reality.
             </p>
             <div className="flex gap-4">
               <a
                 href="#"
-                className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center hover:bg-blue-100 transition-colors"
+                className="w-10 h-10 bg-white-50 rounded-lg flex items-center justify-center hover:bg-blue-100 transition-colors shadow-md"
                 aria-label="Twitter"
               >
-                <img src="/twitter-icon.svg" alt="Twitter" className="w-5 h-5" />
+                <img src="/x.png" alt="Twitter" className="w-5 h-5" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center hover:bg-blue-100 transition-colors"
+                className="w-10 h-10 bg-white-50 rounded-lg flex items-center justify-center hover:bg-blue-100 transition-colors shadow-md"
                 aria-label="LinkedIn"
               >
-                <img src="/linkedin-icon.svg" alt="LinkedIn" className="w-5 h-5" />
+                <img src="/li.png" alt="LinkedIn" className="w-5 h-5" />
               </a>
             </div>
           </div>
 
           {/* Services column */}
           <div>
-            <h3 className="text-gray-900 font-semibold mb-4">Services</h3>
+            <h3 className="font-jakarta font-semibold mb-4">Services</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
+                <a href="#" className="text-[#616161] font-medium font-jakarta hover:text-gray-800 text-sm transition-colors">
                   MVP Development
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
+                <a href="#" className="text-[#616161] font-medium font-jakarta hover:text-gray-800 text-sm transition-colors">
                   UI/UX Design
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
+                <a href="#" className="text-[#616161] font-medium font-jakarta hover:text-gray-800 text-sm transition-colors">
                   Web Development
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
+                <a href="#" className="text-[#616161] font-medium font-jakarta hover:text-gray-800 text-sm transition-colors">
                   Mobile Apps
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
+                <a href="#" className="text-[#616161] font-medium font-jakarta hover:text-gray-800 text-sm transition-colors">
                   Consulting
                 </a>
               </li>
@@ -81,30 +78,30 @@ export default function Footer() {
 
           {/* About column */}
           <div>
-            <h3 className="text-gray-900 font-semibold mb-4">About</h3>
+            <h3 className=" font-jakarta  font-semibold mb-4">About</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
+                <a href="#" className="text-[#616161] font-medium font-jakarta hover:text-gray-800 text-sm transition-colors">
                   Our Process
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
+                <a href="#" className="text-[#616161] font-medium font-jakarta hover:text-gray-800 text-sm transition-colors">
                   How We Work
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
+                <a href="#" className="text-[#616161] font-medium font-jakarta hover:text-gray-800 text-sm transition-colors">
                   Contact
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
+                <a href="#" className="text-[#616161] font-medium font-jakarta hover:text-gray-800 text-sm transition-colors">
                   FAQs
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
+                <a href="#" className="text-[#616161] font-medium font-jakarta hover:text-gray-800 text-sm transition-colors">
                   Contact
                 </a>
               </li>
@@ -113,25 +110,25 @@ export default function Footer() {
 
           {/* Portfolio column */}
           <div>
-            <h3 className="text-gray-900 font-semibold mb-4">Portfolio</h3>
+            <h3 className="font-jakarta font-semibold mb-4">Portfolio</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
+                <a href="#" className="text-[#616161] font-medium font-jakarta hover:text-gray-800 text-sm transition-colors">
                   Case Studies
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
+                <a href="#" className="text-[#616161] font-medium font-jakarta hover:text-gray-800 text-sm transition-colors">
                   Success Stories
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
+                <a href="#" className="text-[#616161] font-medium font-jakarta hover:text-gray-800 text-sm transition-colors">
                   MVP Showcase
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
+                <a href="#" className="text-[#616161] font-medium font-jakarta hover:text-gray-800 text-sm transition-colors">
                   Testimonials
                 </a>
               </li>
@@ -140,20 +137,20 @@ export default function Footer() {
 
           {/* Legal column */}
           <div>
-            <h3 className="text-gray-900 font-semibold mb-4">Legal</h3>
+            <h3 className="font-jakarta font-semibold mb-4">Legal</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
+                <a href="#" className="text-[#616161] font-medium font-jakarta hover:text-gray-800 text-sm transition-colors">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
+                <a href="#" className="text-[#616161] font-medium font-jakarta hover:text-gray-800 text-sm transition-colors">
                   Terms of Services
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
+                <a href="#" className="text-[#616161] font-medium font-jakarta hover:text-gray-800 text-sm transition-colors">
                   Cookie Policy
                 </a>
               </li>

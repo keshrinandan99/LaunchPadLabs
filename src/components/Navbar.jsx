@@ -5,7 +5,10 @@ function Navbar() {
 
     <nav className='container mx-auto justify-center  px-5 2xl:px-0 bg-[#F3F7F8] w-[1440px] h-[95px] relative w-full'>
         <div className='bg-[#F3F7F8]'>
-        <img src='/logo.png' alt="logo" className="absolute left-[80px] top-[18px] cursor-pointer text-shadow-md rounded-sm hover:-translate-y-0.5 transition-all duration-300 ease-in-out "/>
+       
+        <img src='/logo.png' alt="logo" className="absolute left-[80px] top-[18px] cursor-pointer rounded-md hover:-translate-y-0.5 transition-all duration-300 ease-in-out "/>
+      
+       
         <img src="/LaunchPad.png" alt="title" className='w-172px h-28px absolute left-[139px] top-[27px] cursor-pointer hover:-translate-y-0.5 transition-all duration-300 ease-in-out'/>
         </div>
         <div className='flex justify-end'>
