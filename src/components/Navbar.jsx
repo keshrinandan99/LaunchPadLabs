@@ -1,34 +1,55 @@
 import React from 'react'
 import { navLinks } from '../constants/navLinks'
+
 function Navbar() {
   return (
-
-    <nav className='container mx-auto justify-center  px-5 2xl:px-0 bg-[#F3F7F8] w-[1440px] h-[95px] relative w-full'>
-        <div className='bg-[#F3F7F8]'>
-        <img src='/logo.png' alt="logo" className="absolute left-[80px] top-[18px] cursor-pointer text-shadow-md rounded-sm hover:-translate-y-0.5 transition-all duration-300 ease-in-out "/>
-        <img src="/LaunchPad.png" alt="title" className='w-172px h-28px absolute left-[139px] top-[27px] cursor-pointer hover:-translate-y-0.5 transition-all duration-300 ease-in-out'/>
+    <nav className="w-full bg-[#F3F7F8] px-4 sm:px-8 lg:px-20 py-4 shadow-md">
+      <div className="container mx-auto flex items-center justify-between">
+        {/* Logo and Title */}
+        <div className="flex items-center gap-4">
+          <img
+            src="/logo.png"
+            alt="logo"
+            className="w-12 h-12 sm:w-14 sm:h-14 cursor-pointer rounded-sm hover:-translate-y-0.5 transition-all duration-300"
+          />
+          <img
+            src="/LaunchPad.png"
+            alt="title"
+            className="w-32 sm:w-40 h-auto cursor-pointer hover:-translate-y-0.5 transition-all duration-300"
+          />
         </div>
-        <div className='flex justify-end'>
-         <ul className='flex items-center gap-8 '>
-            {navLinks.map(({label})=>{
-                return(
-                    <li key={label}>
-                        <a href={label} className='hidden md:block text-[#1F1F1F] font-semibold opacity-80 font-regular text-sm cursor-pointer hover:opacity-100 transition-all duration-300 ease-in-out hover:-translate-y-0.5 transition-all duration-300 ease-in-out '>{label}</a>
-                    </li>
-                )
-            })}
-        </ul>
-         <img src='/button.png' alt='button' className='w-[137px] h-[70px] bg-transparent border-none outline-none cursor-pointer mt-4 ml-4 hover:-translate-y-0.5 transition-all duration-300 ease-in-out'/>
-         </div>
-      
-    
-        
-       
 
-     
-      
-      </nav>
-        
+        {/* Nav Links */}
+        <ul className="hidden md:flex items-center gap-8">
+          {navLinks.map(({ label, href }) => (
+            <li key={label}>
+              <a
+                href={href || '#'}
+                className="text-[#1F1F1F] font-semibold text-sm opacity-80 hover:opacity-100 hover:-translate-y-0.5 transition-all duration-300"
+              >
+                {label}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        {/* Button */}
+        <div className="hidden md:block">
+          <img
+            src="/button.png"
+            alt="button"
+            className="w-32 sm:w-36 h-auto cursor-pointer hover:-translate-y-0.5 transition-all duration-300"
+          />
+        </div>
+
+        {/* Mobile Menu Button */}
+        <div className="md:hidden">
+          <button className="text-gray-700 focus:outline-none">
+            <img src="/menu-icon.png" alt="menu" className="w-8 h-8" />
+          </button>
+        </div>
+      </div>
+    </nav>
   )
 }
 
