@@ -23,7 +23,7 @@ export default function PricingPage() {
         {/* Pricing Cards */}
         <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* MVP Development Card */}
-          <div className="bg-[#F5F5F5] rounded-3xl p-8 border  shadow-lg bg-gray-50 p-4 border-gray-200   ">
+          <div className="bg-[#F5F5F5] rounded-3xl p-8 border border-gray-200 shadow-lg">
             <div className="flex items-start justify-between mb-6">
               <div className="w-17 h-17 rounded-lg flex items-center justify-center  ">
                 <img src="/rocket.png" alt="rocket" className="w-full h-full" />
@@ -80,7 +80,7 @@ export default function PricingPage() {
 
           {/* Growth Retainer Package Card */}
           <div className="relative">
-            <div className="absolute -top-4 right-8 bg-blue-500 text-white font-jakarta font-bold px-6 py-2 rounded-full text-sm">
+            <div className="absolute -top-4 right-8 bg-blue-500 text-white font-jakarta font-bold px-6 py-2 rounded-full text-sm z-10">
               Most Popular
             </div>
 

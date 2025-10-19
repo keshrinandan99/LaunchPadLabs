@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { navLinks } from '../constants/navLinks'
 import { Link } from 'react-router-dom'
 import { BookCallButton } from './BookCallButton'
+import { Menu, X } from 'lucide-react'
+
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
   // Function to convert label to route path
   const getRoutePath = (label) => {
     const routes = {
@@ -15,38 +19,48 @@ function Navbar() {
     return routes[label] || `/${label.toLowerCase()}`
   }
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
+  const closeMenu = () => {
+    setIsMenuOpen(false)
+  }
+
   return (
     <nav className='w-full bg-[#F3F7F8] px-4 sm:px-8 lg:px-20 py-4'>
       <div className='max-w-[1440px] mx-auto flex items-center justify-between'>
         
         {/* Logo Section */}
-        <div className='flex items-center gap-2 sm:gap-3'>
-          <Link to="/">
-            <img 
-              src='/logo.png' 
-              alt="logo" 
-              className="w-8 sm:w-10 lg:w-12 h-auto cursor-pointer rounded-md hover:-translate-y-0.5 transition-all duration-300 ease-in-out"
-            />
+        <div className='flex items-center gap-3 sm:gap-5'>
+          <Link to="/" onClick={closeMenu}>
+            <div className='bg-gray-100 rounded-md shadow-md p-2 rounded-full'>
+              <img 
+                src='/logo.png' 
+                alt="logo" 
+                className="w-6 sm:w-6 lg:w-8 h-auto cursor-pointer rounded-md hover:-translate-y-0.5 transition-all duration-300 ease-in-out"
+              />
+            </div>
           </Link>
           
-          <Link to="/">
+          <Link to="/" onClick={closeMenu}>
             <img 
               src="/LaunchPad.png" 
               alt="title" 
-              className='h-5 sm:h-6 lg:h-7 w-auto cursor-pointer hover:-translate-y-0.5 transition-all duration-300 ease-in-out'
+              className='h-4 sm:h-5 lg:h-6 w-auto cursor-pointer hover:-translate-y-0.5 transition-all duration-300 ease-in-out'
             />
           </Link>
         </div>
         
-        {/* Navigation Links and Button */}
-        <div className='flex items-center gap-3 sm:gap-4 lg:gap-6'>
-          <ul className='hidden md:flex items-center gap-4 lg:gap-6 xl:gap-8'>
+        {/* Desktop Navigation Links and Button */}
+        <div className='hidden md:flex items-center gap-3 sm:gap-4 lg:gap-6'>
+          <ul className='flex items-center gap-4 lg:gap-6 xl:gap-8'>
             {navLinks.map(({label}) => {
               return(
                 <li key={label}>
                   <Link 
                     to={getRoutePath(label)} 
-                    className='text-black font-semibold opacity-80 text-sm cursor-pointer hover:opacity-100 hover:-translate-y-0.5 transition-all duration-300 ease-in-out whitespace-nowrap'
+                    className='text-black font-semibold opacity-80 text-sm cursor-pointer whitespace-nowrap hover:opacity-100 hover:-translate-y-0.5 transition-all duration-300 ease-in-out '
                   >
                     {label}
                   </Link>
@@ -54,10 +68,59 @@ function Navbar() {
               )
             })}
           </ul>
-          
-          <BookCallButton title="Book a Call" />
+          <div className='flex justify-center items-center px-2 sm:px-6 md:px-8'>
+            <BookCallButton />
+          </div>
         </div>
-        
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={toggleMenu}
+          className='md:hidden p-2 rounded-lg hover:bg-gray-200 transition-colors duration-200'
+          aria-label='Toggle menu'
+        >
+          {isMenuOpen ? (
+            <X className='w-6 h-6 text-black' />
+          ) : (
+            <Menu className='w-6 h-6 text-black' />
+          )}
+        </button>
+      </div>
+
+      {/* Mobile Menu Overlay */}
+      {isMenuOpen && (
+        <div 
+          className='md:hidden fixed inset-0 bg-black bg-opacity-50 z-40 top-[72px]'
+          onClick={closeMenu}
+        />
+      )}
+
+      {/* Mobile Menu Drawer */}
+      <div 
+        className={`md:hidden fixed top-[72px] right-0 h-[calc(100vh-72px)] w-64 bg-[#F3F7F8] shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${
+          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      >
+        <div className='flex flex-col p-6 gap-6'>
+          <ul className='flex flex-col gap-4'>
+            {navLinks.map(({label}) => {
+              return(
+                <li key={label}>
+                  <Link 
+                    to={getRoutePath(label)}
+                    onClick={closeMenu}
+                    className='text-black font-semibold opacity-80 text-base cursor-pointer hover:opacity-100 transition-opacity duration-200 block py-2'
+                  >
+                    {label}
+                  </Link>
+                </li>
+              )
+            })}
+          </ul>
+          <div className='pt-4 border-t border-gray-300'>
+            <BookCallButton />
+          </div>
+        </div>
       </div>
     </nav>
   )

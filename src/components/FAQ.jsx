@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/accordion";
 //import { BookCallButton } from "@/components/BookCallButton";
 import { Card } from "@/components/ui/card";
-
+import { BookCallButton } from "./BookCallButton";
 
 const faqs = [
   {
@@ -80,20 +80,20 @@ export const FAQSection = () => {
           {/* CTA Card */}
           <div className="lg:col-span-1">
             <Card className="p-5 bg-card border border-border shadow-[var(--shadow-md)] rounded-xl relative top-8   ">
-              <div className="flex flex-col items-center text-center space-y-6">
+              <div className="flex flex-col items-start text-left space-y-3">
                 <img
                   src="/profileImg.png"
                   alt="Profile"
                   className="w-20 h-20 rounded-full object-cover shadow-[var(--shadow-md)]"
                 />
                 <div>
-                  <p className="text-[#8C8C8C] mb-1 font-jakarta text-semibold">Still not sure?</p>
-                  <h3 className="text-2xl font-semibold text-jakarta text-black">Book a free call.</h3>
+                  <p className="text-[#8C8C8C] mb-1 font-jakarta font-bold text-lg flex ">Still not sure?</p>
+                  <h3 className="text-[20px] font-semibold font-jakarta text-black">Book a free call.</h3>
                 </div>
-                <p className="text-sm text-black font-jakarta ">
+                <p className="text-sm text-black font-jakarta font-regular">
                   Learn more about how we work and how we can help you and your startup.
                 </p>
-                {/* <BookCallButton /> */}
+                <BookCallButton />
               </div>
             </Card>
           </div>

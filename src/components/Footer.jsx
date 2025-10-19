@@ -2,10 +2,7 @@
 export default function Footer() {
   return (
     <footer className="relative bg-gray-50 border-t border-gray-200 overflow-hidden">
-      {/* Background text */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none mt-32 sm:mt-40 md:mt-48 lg:mt-60">
-        <img src="footerText.png" alt="footerImage" className='w-full max-w-7xl h-auto px-4'/>
-      </div>
+     
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
@@ -155,12 +152,17 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="pt-8 border-t border-gray-200">
-          <p className="text-gray-500 text-sm text-center">
-            © 2025 LinkVerse. All rights reserved.
-          </p>
-        </div>
+        {/* Background text */}
+      <div className="absolute inset-0 flex items-center sm: justify-center pointer-events-none mt-74 sm:mt-54 md:mt-66 lg:mt-74">
+        <img src="footerText.png" alt="footerImage" className='w-full max-w-7xl h-auto px-4'/>
+      </div>
+      
+      {/* Copyright below background text */}
+      <div className="relative z-10 pt-8 border-t border-gray-200 mt-60 sm:mt-44 md:mt-60 lg:mt-60">
+        <p className="text-gray-500 text-sm text-center">
+          © 2025 LinkVerse. All rights reserved.
+        </p>
+      </div>
       </div>
     </footer>
   )

@@ -4,6 +4,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+
+
+/* Removed global background override to prevent conflicts with component-specific backgrounds */
+
 .font-jakarta {
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
@@ -77,10 +81,6 @@ main {
 
       ul {
         @apply flex-center gap-8;
-
-        a {
-          @apply hidden md:block text-white opacity-80  text-sm cursor-pointer hover:opacity-100 transition-all duration-300 ease-in-out;
-        }
       }
     }
   }

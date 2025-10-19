@@ -11,7 +11,8 @@ export const Card = ({
   onViewClick,
 }) => {
   return (
-    <article className="bg-card rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-border">
+   
+    <article className=" rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden ">
       <div className="grid md:grid-cols-2 gap-6 p-8 md:p-10">
         {/* Left Content */}
         <div className="flex flex-col justify-between space-y-6">
@@ -41,7 +42,7 @@ export const Card = ({
               variant="outline"
               size="lg"
               onClick={onViewClick}
-              className="group rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+              className="cursor-pointer group rounded-full border-2 border-blue-400 text-primary hover:transition-all duration-300"
             >
               View Case Study
               <ArrowUpRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
