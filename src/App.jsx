@@ -1,7 +1,7 @@
 import Footer from "./components/Footer.jsx"
 import Hero from "./components/Main"
 import Navbar from "./components/Navbar"
-import Ourfounder from "./components/ourFounder.jsx"
+import Ourfounder from "./components/Ourfounder.jsx"
 import Pricing from "./components/Pricing.jsx"
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom"
 import Project from "./components/Project.jsx"
