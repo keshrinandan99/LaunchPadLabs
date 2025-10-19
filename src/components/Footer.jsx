@@ -9,9 +9,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 mb-16">
         
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gray-100 rounded-lg flex items-center justify-center shadow-md">
+            <div className="flex items-center gap-4 mb-6">
+            <div className="bg-white shadow-lg p-1 rounded-md bg-gray-200">
+              <div className="w-6 h-6 sm:w-8 sm:h-8  rounded-lg flex items-center justify-center ">
                 <img src="logo.png" alt="logoImg" className='w-full h-auto'/>
+              </div>
               </div>
               <div>
                 <img src="/LaunchPad.png" alt="LaunchPadImg" className='h-5 sm:h-6 w-auto'/>
