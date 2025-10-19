@@ -1,11 +1,49 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { navLinks } from '../constants/navLinks'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { BookCallButton } from './BookCallButton'
 import { Menu, X } from 'lucide-react'
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const navigate = useNavigate()
+  const location = useLocation()
+
+  // Handle smooth scrolling when hash changes
+  useEffect(() => {
+    const hash = location.hash
+    if (hash) {
+      setTimeout(() => {
+        const element = document.querySelector(hash)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
+      }, 100)
+    }
+  }, [location])
+
+  // Custom navigation handler
+  const handleNavClick = (e, path) => {
+    e.preventDefault()
+    closeMenu()
+    
+    if (path.includes('#')) {
+      const [route, hash] = path.split('#')
+      
+      if (location.pathname === route || route === '/') {
+        // Already on the page, just scroll
+        const element = document.getElementById(hash)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
+      } else {
+        // Navigate first, then scroll
+        navigate(path)
+      }
+    } else {
+      navigate(path)
+    }
+  }
 
   // Function to convert label to route path
   const getRoutePath = (label) => {
@@ -14,7 +52,8 @@ function Navbar() {
       'How it works': '/faq',
       'Our Work': '/project',
       'Founder': '/founder',
-      'Pricing': '/pricing'
+      'Pricing': '/pricing',
+      'Our Process': '/#our-process'
     }
     return routes[label] || `/${label.toLowerCase()}`
   }
@@ -56,14 +95,16 @@ function Navbar() {
         <div className='hidden md:flex items-center gap-3 sm:gap-4 lg:gap-6'>
           <ul className='flex items-center gap-4 lg:gap-6 xl:gap-8'>
             {navLinks.map(({label}) => {
+              const path = getRoutePath(label)
               return(
                 <li key={label}>
-                  <Link 
-                    to={getRoutePath(label)} 
-                    className='text-black font-semibold opacity-80 text-sm cursor-pointer whitespace-nowrap hover:opacity-100 hover:-translate-y-0.5 transition-all duration-300 ease-in-out '
+                  <a
+                    href={path}
+                    onClick={(e) => handleNavClick(e, path)}
+                    className='text-black font-semibold opacity-80 text-sm cursor-pointer whitespace-nowrap hover:opacity-100 hover:-translate-y-0.5 transition-all duration-300 ease-in-out'
                   >
                     {label}
-                  </Link>
+                  </a>
                 </li>
               )
             })}
@@ -104,15 +145,16 @@ function Navbar() {
         <div className='flex flex-col p-6 gap-6'>
           <ul className='flex flex-col gap-4'>
             {navLinks.map(({label}) => {
+              const path = getRoutePath(label)
               return(
                 <li key={label}>
-                  <Link 
-                    to={getRoutePath(label)}
-                    onClick={closeMenu}
+                  <a
+                    href={path}
+                    onClick={(e) => handleNavClick(e, path)}
                     className='text-black font-semibold opacity-80 text-base cursor-pointer hover:opacity-100 transition-opacity duration-200 block py-2'
                   >
                     {label}
-                  </Link>
+                  </a>
                 </li>
               )
             })}
