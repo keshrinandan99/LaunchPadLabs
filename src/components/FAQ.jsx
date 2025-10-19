@@ -39,7 +39,7 @@ const faqs = [
 
 export const FAQSection = () => {
   return (
-    <section className="w-full min-h-screen bg-background py-16 px-4 sm:px-6 lg:px-8">
+    <section className="w-full min-h-screen  py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-12">
@@ -79,7 +79,7 @@ export const FAQSection = () => {
 
           {/* CTA Card */}
           <div className="lg:col-span-1">
-            <Card className="p-5 bg-card border border-border shadow-[var(--shadow-md)] rounded-xl relative top-8   ">
+            <Card className="p-5  border border-border shadow-[var(--shadow-md)] rounded-xl relative top-8   ">
               <div className="flex flex-col items-start text-left space-y-3">
                 <img
                   src="/profileImg.png"

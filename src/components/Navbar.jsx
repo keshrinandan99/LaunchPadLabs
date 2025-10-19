@@ -71,25 +71,34 @@ function Navbar() {
       <div className='max-w-[1440px] mx-auto flex items-center justify-between'>
         
         {/* Logo Section */}
-        <div className='flex items-center gap-3 sm:gap-5'>
-          <Link to="/" onClick={closeMenu}>
-            <div className='bg-gray-100 rounded-md shadow-md p-2 rounded-full'>
-              <img 
-                src='/logo.png' 
-                alt="logo" 
-                className="w-6 sm:w-6 lg:w-8 h-auto cursor-pointer rounded-md hover:-translate-y-0.5 transition-all duration-300 ease-in-out"
-              />
-            </div>
-          </Link>
-          
-          <Link to="/" onClick={closeMenu}>
-            <img 
-              src="/LaunchPad.png" 
-              alt="title" 
-              className='h-4 sm:h-5 lg:h-6 w-auto cursor-pointer hover:-translate-y-0.5 transition-all duration-300 ease-in-out'
-            />
-          </Link>
-        </div>
+        <div className="flex items-center gap-3 sm:gap-5">
+  <Link to="/" onClick={closeMenu}>
+    <div className="bg-gray-100 rounded-md shadow-md p-2 rounded-full">
+      <img
+        src="/logo.png"
+        alt="logo"
+        className="
+          w-7 sm:w-8 md:w-8 lg:w-8
+          h-auto cursor-pointer rounded-md 
+          hover:-translate-y-0.5 transition-all duration-300 ease-in-out
+        "
+      />
+    </div>
+  </Link>
+
+  <Link to="/" onClick={closeMenu}>
+    <img
+      src="/LaunchPad.png"
+      alt="title"
+      className="
+        h-6 sm:h-7 md:h-7 lg:h-5 
+        w-auto cursor-pointer 
+        hover:-translate-y-0.5 transition-all duration-300 ease-in-out
+      "
+    />
+  </Link>
+</div>
+
         
         {/* Desktop Navigation Links and Button */}
         <div className='hidden md:flex items-center gap-3 sm:gap-4 lg:gap-6'>
