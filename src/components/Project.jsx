@@ -15,7 +15,7 @@ function Project() {
   return (
     <div className='w-full'>
       <img src='ourWork1.png' alt='ourWorkImg' className='w-full h-auto'/>
-      
+      <div className='w-full bg-[#F3F7F8] '>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8'>
         <Card
           tags={tags}
@@ -41,6 +41,7 @@ function Project() {
       </div>
       
       <img src='ourWork3.png' alt='ourWorkfooterImg' className='w-full h-auto mt-8 sm:mt-12 lg:mt-20'/>
+    </div>
     </div>
   )
 }

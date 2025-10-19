@@ -9,7 +9,7 @@ function Navbar() {
   const navigate = useNavigate()
   const location = useLocation()
 
-  // Handle smooth scrolling when hash changes
+  
   useEffect(() => {
     const hash = location.hash
     if (hash) {
@@ -22,7 +22,7 @@ function Navbar() {
     }
   }, [location])
 
-  // Custom navigation handler
+  
   const handleNavClick = (e, path) => {
     e.preventDefault()
     closeMenu()
@@ -31,13 +31,13 @@ function Navbar() {
       const [route, hash] = path.split('#')
       
       if (location.pathname === route || route === '/') {
-        // Already on the page, just scroll
+        
         const element = document.getElementById(hash)
         if (element) {
           element.scrollIntoView({ behavior: 'smooth', block: 'start' })
         }
       } else {
-        // Navigate first, then scroll
+        
         navigate(path)
       }
     } else {
@@ -45,7 +45,7 @@ function Navbar() {
     }
   }
 
-  // Function to convert label to route path
+  
   const getRoutePath = (label) => {
     const routes = {
       'Home': '/',
@@ -100,7 +100,7 @@ function Navbar() {
 </div>
 
         
-        {/* Desktop Navigation Links and Button */}
+        
         <div className='hidden md:flex items-center gap-3 sm:gap-4 lg:gap-6'>
           <ul className='flex items-center gap-4 lg:gap-6 xl:gap-8'>
             {navLinks.map(({label}) => {
@@ -123,7 +123,7 @@ function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Menu Button */}
+      
         <button
           onClick={toggleMenu}
           className='md:hidden p-2 rounded-lg hover:bg-gray-200 transition-colors duration-200'
@@ -137,7 +137,7 @@ function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu Overlay */}
+     
       {isMenuOpen && (
         <div 
           className='md:hidden fixed inset-0 bg-black bg-opacity-50 z-40 top-[72px]'
@@ -145,7 +145,7 @@ function Navbar() {
         />
       )}
 
-      {/* Mobile Menu Drawer */}
+      
       <div 
         className={`md:hidden fixed top-[72px] right-0 h-[calc(100vh-72px)] w-64 bg-[#F3F7F8] shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'

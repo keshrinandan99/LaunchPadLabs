@@ -4,7 +4,7 @@ export default function PricingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-16 px-4">
       <div className="max-w-6xl mx-auto">
-        {/* Header Section */}
+      
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 py-2 mb-8">
             <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
@@ -20,7 +20,7 @@ export default function PricingPage() {
           </p>
         </div>
 
-        {/* Pricing Cards */}
+        
         <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* MVP Development Card */}
           <div className="bg-[#F5F5F5] rounded-3xl p-8 border border-gray-200 shadow-lg">
@@ -46,7 +46,7 @@ export default function PricingPage() {
               Book a Free MVP Call
             </button>
 
-            {/* What's Included */}
+            
             <div className="border-t border-gray-200 pt-6">
               <h3 className="font-jakarta font-semibold text-gray-900 mb-4">What's Included</h3>
               <ul className="space-y-3">
@@ -78,7 +78,6 @@ export default function PricingPage() {
             </div>
           </div>
 
-          {/* Growth Retainer Package Card */}
           <div className="relative">
             <div className="absolute -top-4 right-8 bg-blue-500 text-white font-jakarta font-bold px-6 py-2 rounded-full text-sm z-10">
               Most Popular
@@ -107,7 +106,7 @@ export default function PricingPage() {
                 Book My MVP Build
               </button>
 
-              {/* Monthly Services */}
+            
               <div className="border-t border-gray-200 pt-6">
                 <h3 className="font-jakarta font-semibold text-gray-900 mb-4">Monthly Services:</h3>
                 <ul className="space-y-3">

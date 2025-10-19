@@ -42,7 +42,7 @@ export function ProcessSection() {
   return (
     <section className="w-full py-16 px-4 md:py-24 md:px-6">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
+       
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-blue-200 mb-6 shadow-md">
             <div className="w-2 h-2 rounded-full bg-blue-500" />
@@ -57,7 +57,7 @@ export function ProcessSection() {
           </p>
         </div>
 
-        {/* Cards Grid */}
+     
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {processSteps.map((step, index) => (
             <ProcessCard

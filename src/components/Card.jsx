@@ -50,7 +50,7 @@ export const Card = ({
           </div>
         </div>
 
-        {/* Right Image */}
+     
         <div className="relative h-64 md:h-full min-h-[300px] rounded-xl overflow-hidden bg-muted">
           <img
             src={imageUrl}

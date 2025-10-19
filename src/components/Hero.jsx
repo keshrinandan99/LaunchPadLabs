@@ -3,14 +3,14 @@ import React from 'react'
 function Hero() {
   return (
     <main className='relative w-full bg-[#F3F7F8]'>
-      {/* Hero Section Image - Full width, responsive */}
+     
       <img 
         src="/HeroSection.png" 
         alt='heroSectionImg' 
         className='w-full h-auto'
       />
       
-      {/* Book a Call - Positioned absolutely, responsive */}
+   
       <img 
         src="/Bookacall.png" 
         alt='bookaCallImage' 
@@ -20,7 +20,7 @@ function Hero() {
                    top-[48%] sm:top-[50%] md:top-[52%] lg:top-[54%]'
       />
       
-      {/* Trusted By - Positioned absolutely, responsive */}
+      
       <img 
         src='Trusted by.png' 
         alt='trustedByImg' 

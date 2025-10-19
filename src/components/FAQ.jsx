@@ -5,7 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-//import { BookCallButton } from "@/components/BookCallButton";
+
 import { Card } from "@/components/ui/card";
 import { BookCallButton } from "./BookCallButton";
 
@@ -39,6 +39,7 @@ const faqs = [
 
 export const FAQSection = () => {
   return (
+    <div className="bg-[#F3F7F8]">
     <section className="w-full min-h-screen  py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -55,9 +56,9 @@ export const FAQSection = () => {
           </p>
         </div>
 
-        {/* Content Grid */}
+    
         <div className="grid lg:grid-cols-3 gap-8">
-          {/* FAQ Accordion */}
+     
           <div className="lg:col-span-2">
             <Accordion type="single" collapsible defaultValue="item-1" className="space-y-4">
               {faqs.map((faq) => (
@@ -77,7 +78,7 @@ export const FAQSection = () => {
             </Accordion>
           </div>
 
-          {/* CTA Card */}
+       
           <div className="lg:col-span-1">
             <Card className="p-5  border border-border shadow-[var(--shadow-md)] rounded-xl relative top-8   ">
               <div className="flex flex-col items-start text-left space-y-3">
@@ -100,5 +101,6 @@ export const FAQSection = () => {
         </div>
       </div>
     </section>
+    </div>
   );
 };

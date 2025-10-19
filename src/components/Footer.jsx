@@ -4,10 +4,10 @@ export default function Footer() {
     <footer className="relative bg-gray-50 border-t border-gray-200 overflow-hidden">
      
 
-      {/* Content */}
+    
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 mb-16">
-          {/* Branding section */}
+        
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gray-100 rounded-lg flex items-center justify-center shadow-md">
@@ -38,7 +38,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Services column */}
+          
           <div>
             <h3 className="font-jakarta font-semibold mb-4">Services</h3>
             <ul className="space-y-3">
@@ -70,7 +70,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* About column */}
+     
           <div>
             <h3 className=" font-jakarta  font-semibold mb-4">About</h3>
             <ul className="space-y-3">
@@ -102,7 +102,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Portfolio column */}
+   
           <div>
             <h3 className="font-jakarta font-semibold mb-4">Portfolio</h3>
             <ul className="space-y-3">
@@ -129,7 +129,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Legal column */}
+     
           <div>
             <h3 className="font-jakarta font-semibold mb-4">Legal</h3>
             <ul className="space-y-3">
@@ -152,12 +152,12 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Background text */}
+   
       <div className="absolute inset-0 flex items-center sm: justify-center pointer-events-none mt-74 sm:mt-54 md:mt-66 lg:mt-74">
         <img src="footerText.png" alt="footerImage" className='w-full max-w-7xl h-auto px-4'/>
       </div>
       
-      {/* Copyright below background text */}
+     
       <div className="relative z-10 pt-8 border-t border-gray-200 mt-60 sm:mt-44 md:mt-60 lg:mt-60">
         <p className="text-gray-500 text-sm text-center">
           © 2025 LinkVerse. All rights reserved.
