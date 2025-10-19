@@ -5,7 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
+//import { BookCallButton } from "@/components/BookCallButton";
 import { Card } from "@/components/ui/card";
 
 
@@ -93,13 +93,7 @@ export const FAQSection = () => {
                 <p className="text-sm text-black font-jakarta ">
                   Learn more about how we work and how we can help you and your startup.
                 </p>
-              
- <img 
-  src="/bookcall.png" 
-  alt="bookACallImg" 
-  className="w-32 h-10   cursor-pointer object-cover"
-/>
-             
+                {/* <BookCallButton /> */}
               </div>
             </Card>
           </div>

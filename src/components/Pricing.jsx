@@ -1,9 +1,9 @@
 import React from 'react'
-
+import PricingPage from './PricingPage'
 function Pricing() {
   return (
     <div className='w-full'>
-      <img src='pricing.png' alt='pricingImg' className='w-full h-auto'/>
+      <PricingPage />
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import { navLinks } from '../constants/navLinks'
 import { Link } from 'react-router-dom'
-
+import { BookCallButton } from './BookCallButton'
 function Navbar() {
   // Function to convert label to route path
   const getRoutePath = (label) => {
@@ -46,7 +46,7 @@ function Navbar() {
                 <li key={label}>
                   <Link 
                     to={getRoutePath(label)} 
-                    className='text-[#1F1F1F] font-semibold opacity-80 text-sm cursor-pointer hover:opacity-100 hover:-translate-y-0.5 transition-all duration-300 ease-in-out whitespace-nowrap'
+                    className='text-black font-semibold opacity-80 text-sm cursor-pointer hover:opacity-100 hover:-translate-y-0.5 transition-all duration-300 ease-in-out whitespace-nowrap'
                   >
                     {label}
                   </Link>
@@ -55,11 +55,7 @@ function Navbar() {
             })}
           </ul>
           
-          <img 
-            src='/button.png' 
-            alt='button' 
-            className='h-8 w-auto cursor-pointer hover:-translate-y-0.5 transition-all duration-300 ease-in-out'
-          />
+          <BookCallButton title="Book a Call" />
         </div>
         
       </div>
