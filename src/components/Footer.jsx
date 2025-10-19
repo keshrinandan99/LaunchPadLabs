@@ -10,7 +10,7 @@ export default function Footer() {
         
           <div className="lg:col-span-2">
             <div className="flex items-center gap-4 mb-6">
-            <div className="bg-white shadow-lg p-1 rounded-md bg-gray-200">
+            <div className=" shadow-xl p-1 rounded-md bg-gray-50">
               <div className="w-6 h-6 sm:w-8 sm:h-8  rounded-lg flex items-center justify-center ">
                 <img src="logo.png" alt="logoImg" className='w-full h-auto'/>
               </div>
