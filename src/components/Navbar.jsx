@@ -86,7 +86,7 @@ function Navbar() {
     </div>
   </Link>
 
-  <Link to="/" onClick={closeMenu}>
+  <Link to="/" onClick={closeMenu} className='hidden sm:block'>
     <img
       src="/LaunchPad.png"
       alt="title"

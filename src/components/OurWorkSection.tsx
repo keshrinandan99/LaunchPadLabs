@@ -44,22 +44,22 @@ const defaultProjects: Project[] = [
 
 export function OurWorkSection({ projects = defaultProjects }: OurWorkSectionProps) {
   return (
-    <section className="w-full bg-[#F5F5F5] py-16 md:py-24">
+    <section className="w-full bg-[#F3F7F8] py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       
         <div className="mb-12 flex flex-col items-center gap-4 text-center">
       
-          <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2">
-            <div className="h-2 w-2 rounded-full bg-blue-500" />
-            <span className="text-sm font-medium text-foreground">Our Work</span>
+          <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-2 py-1 ">
+            <img src="ourWorkDiv.png" alt="ourWorkImg"/>
           </div>
 
-         
-          <h2 className="text-balance text-3xl font-jakarta font-bold tracking-tight text-foreground md:text-3xl lg:text-5xl">
-            Every product here went from idea to live in 2 weeks
-          </h2>
+     <h2 className="font-jakarta font-semibold tracking-tight text-foreground w-full h-auto sm:w-[374px] sm:h-[30px] sm:whitespace-nowrap text-xl sm:text-2xl md:text-[28px] mr-0 sm:mr-60">
+    Every product here went from idea to live in 2 weeks
+  </h2>
 
-          <p className="text-lg text-jakarta text-[#525252]">Built, launched, and loved by real users</p>
+  <p className="text-base sm:text-lg font-jakarta text-[#525252] mt-2 sm:mt-0">
+    Built, launched, and loved by real users
+  </p>
         </div>
 
        
@@ -76,7 +76,7 @@ export function OurWorkSection({ projects = defaultProjects }: OurWorkSectionPro
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
                  
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="object-cover transition-transform duration-300 scale-105 group-hover:scale-100"
                 />
               </div>
 
