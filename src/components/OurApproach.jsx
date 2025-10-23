@@ -16,16 +16,16 @@ export default function OurApproach() {
         </div>
 
         {/* Images Section */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-6 sm:gap-8 md:gap-12 lg:gap-16">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6 sm:gap-8 md:gap-12 lg:gap-16">
           <img 
             src="OA1.png" 
             alt="OAImg" 
-            className="w-full max-w-sm md:max-w-md lg:max-w-lg h-auto object-contain"
+            className="w-[80%] max-w-xs md:max-w-sm lg:max-w-md h-auto object-contain"
           />
           <img 
             src="OA2.png" 
             alt="OAImg"
-            className="w-full max-w-sm md:max-w-md lg:max-w-lg h-auto object-contain"
+            className="w-[80%] max-w-xs md:max-w-sm lg:max-w-md h-auto object-contain"
           />
         </div>
       </div>
